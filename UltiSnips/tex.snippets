@@ -1,0 +1,47 @@
+#####################
+# Journal
+# https://b4d.sablun.org/blog/2020-01-21-journaling-with-latex/
+
+snippet journal "Journal" b
+%-------------------------------------------------------------------------------
+\begin{loggentry}{`date +%d/%m/%Y`}{$1}
+
+\subsection{Morning}
+
+`fortune stoic-quote`
+
+\paragraph{I am grateful for...}
+\begin{enumerate}
+  \item $2
+  \item $3
+  \item $4
+\end{enumerate}
+
+\paragraph{What would make today great?}
+\begin{enumerate}
+  \item $5
+  \item $6
+  \item $7
+\end{enumerate}
+
+\paragraph{Daily affirmations. I am...}
+$8
+
+\subsection{Evening}
+
+\paragraph{Three amazing things that happened today...}
+\begin{enumerate}
+  \item $9
+  \item $10
+  \item $11
+\end{enumerate}
+
+\paragraph{How could I have made today even better?}
+$12
+
+\subsection{Daily thoughts}
+$0
+
+\end{loggentry}
+
+endsnippet

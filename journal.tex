@@ -1,0 +1,100 @@
+\documentclass[nobib,a4paper]{tufte-book}
+%\usepackage{lipsum}
+
+% a4paper symmetric justified
+
+\usepackage{microtype} % Improves character and word spacing
+
+
+\usepackage{graphicx} % Needed to insert images into the document
+\graphicspath{{images/}} % Sets the default location of pictures
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio} % Improves figure scaling
+
+\usepackage{wasysym}
+\usepackage{fontawesome}
+
+\setcounter{tocdepth}{1}
+
+\newcommand{\monthyear}{\ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi\space\number\year} % A command to print the current month and year
+
+
+\newenvironment{loggentry}[2]% date, heading
+{\noindent\textbf{#2}\marginnote{#1}\\}{\vspace{0.5cm}}
+
+
+%----------------------------------------------------------------------------------------
+%       CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\knjiga}[1]
+{
+    \footnote{\faBook\enspace {#1}}
+}
+
+\newcommand{\koncert}[1]
+{
+    \footnote{\faMusic\enspace {#1}}
+}
+
+\newcommand{\potovanje}[1]
+{
+    \footnote{\faPlane\enspace {#1}}
+}
+
+\newcommand{\film}[1]
+{
+    \footnote{\faPlayCircle0\enspace {#1}}
+}
+
+
+%----------------------------------------------------------------------------------------
+%       INFO
+%----------------------------------------------------------------------------------------
+
+\title{Journal} % Title of the book
+
+\author[Jane Doe]{Jane Doe} % Author
+
+\publisher{2020} % Publisher
+
+\begin{document}
+
+\frontmatter
+
+
+\maketitle
+
+
+%\newpage
+
+
+%----------------------------------------------------------------------------------------
+%       TOC
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Print the table of contents
+
+%\clearpage
+
+
+%----------------------------------------------------------------------------------------
+\mainmatter
+
+%----------------------------------------------------------------------------------------
+%\chapter*{Introduction} % The asterisk leaves out this chapter from the table of contents
+\chapter{2020} % The asterisk leaves out this chapter from the table of contents
+
+\include{2020/01}
+
+
+%----------------------------------------------------------------------------------------
+
+\backmatter
+%\printindex % Print the index at the very end of the document
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+
+% https://tex.stackexchange.com/questions/68525/using-latex-to-keep-a-diary
